@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday cutie Nina! | From Mahmuttttt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+            padding: 2.5rem;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 8px 32px rgba(255, 105, 180, 0.4);
+            transition: all 0.5s ease;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .container:hover {
+            box-shadow: 0 8px 32px rgba(255, 105, 180, 0.7);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #FF1493;
+            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 20, 147, 0.5);
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: bounce-in 1.5s forwards 0.5s;
+        }
+
+        .subtitle {
+            font-size: 1.6rem;
+            color: #8A2BE2;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
+            opacity: 0;
+        }
+
+        .next-button {
+            padding: 1rem 3rem;
+            font-size: 1.5rem;
+            background: linear-gradient(45deg, #FF1493, #8A2BE2);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.5);
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fade-in 1s forwards 3s;
+        }
+
+        .next-button:hover {
+            transform: scale(1.08) translateY(-5px);
+            box-shadow: 0 6px 25px rgba(255, 20, 147, 0.8);
+            background: linear-gradient(45deg, #8A2BE2, #FF1493);
+        }
+
+        .audio-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 15px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .audio-controls button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #FF1493;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .audio-controls button:hover {
+            transform: scale(1.2);
+            color: #8A2BE2;
+        }
+
+        .audio-controls input {
+            width: 100px;
+        }
+
+        /* Floating Name Styles */
+        .floating-name {
+            position: absolute;
+            font-weight: bold;
+            font-size: 1.6rem;
+            z-index: 2;
+            pointer-events: none;
+            text-shadow: 0 0 10px #ffffff, 0 0 20px #ff69b4, 0 0 30px #8a2be2;
+            white-space: nowrap;
+        }
+
+        /* Floating Light Effects */
+        .glow-light {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 0 15px 5px #ffffff, 0 0 25px 10px #ff1493;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes bounce-in {
+            0% { transform: scale(0); opacity: 0; }
+            60% { transform: scale(1.1); opacity: 1; }
+            80% { transform: scale(0.9); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .typewriter-container {
+            display: inline-block;
+            margin: 0 auto;
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            height: 2.5rem;
+        }
+
+        .typewriter-text {
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typewriter 3s steps(50) forwards 1.5s;
+        }
+
+        .cursor {
+            position: absolute;
+            right: -5px;
+            width: 3px;
+            height: 100%;
+            background-color: #8A2BE2;
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.2rem; }
+            .container { width: 90%; padding: 1.5rem; }
+            .next-button { padding: 0.8rem 2rem; font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Happy Birthday,<br>Nina! 🎉🎂</h1>
+        <div class="typewriter-container">
+            <div class="subtitle typewriter-text">
+                Hey Bestie! Mahmut made a special surprise for you! ✨
+                <span class="cursor"></span>
+            </div>
+        </div>
+        <br>
+        <button class="next-button" onclick="goToNextPage()">Let's Go! ✨</button>
+    </div>
+
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+        <button id="play-pause"><i class="play-icon">▶️</i></button>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <audio id="birthday-song" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+        // Audio Player Controls
+        const audio = document.getElementById('birthday-song');
+        const playPauseBtn = document.getElementById('play-pause');
+        const volumeControl = document.getElementById('volume');
+        let isPlaying = false;
+
+        audio.volume = volumeControl.value;
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                audio.play()
+                    .then(() => {
+                        isPlaying = true;
+                        playPauseBtn.innerHTML = '⏸️';
+                    })
+                    .catch(error => {
+                        console.log("Autoplay waiting for user interaction.");
+                    });
+            }, 1000);
+        });
+
+        playPauseBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                playPauseBtn.innerHTML = '▶️';
+            } else {
+                audio.play();
+                playPauseBtn.innerHTML = '⏸️';
+            }
+            isPlaying = !isPlaying;
+        });
+
+        volumeControl.addEventListener('input', () => {
+            audio.volume = volumeControl.value;
+        });
+
+        function goToNextPage() {
+            gsap.to('.next-button', {
+                scale: 1.2,
+                yoyo: true,
+                repeat: 1,
+                duration: 0.3,
+                onComplete: () => {
+                    window.location.href = "memorylane.html";
+                }
+            });
+        }
+
+        // Floating Background Elements (Balloons, Hearts, Lights, Nina & Mahmut Names)
+        function createFloatingElements() {
+            const colors = ['#FF1493', '#8A2BE2', '#FFD700', '#FF4500', '#00BFFF', '#FF69B4'];
+            const names = ['Nina ✨', 'Mahmut 💖', 'Nina & Mahmut 💫', 'Besties Forever 🌸'];
+            const types = ['balloon', 'heart', 'star', 'name', 'glow'];
+
+            for (let i = 0; i < 35; i++) {
+                setTimeout(() => {
+                    const element = document.createElement('div');
+                    const selectedType = types[Math.floor(Math.random() * types.length)];
+
+                    element.style.position = 'absolute';
+                    element.style.left = Math.random() * 95 + 'vw';
+                    element.style.top = (window.innerHeight + 50) + 'px'; // Below screen
+
+                    if (selectedType === 'name') {
+                        element.className = 'floating-name';
+                        element.innerText = names[Math.floor(Math.random() * names.length)];
+                        element.style.color = colors[Math.floor(Math.random() * colors.length)];
+                        element.style.fontSize = (Math.random() * 0.8 + 1.2) + 'rem';
+                    } else if (selectedType === 'balloon') {
+                        element.innerHTML = '🎈';
+                        element.style.fontSize = (Math.random() * 25 + 20) + 'px';
+                    } else if (selectedType === 'heart') {
+                        element.innerHTML = Math.random() > 0.5 ? '❤️' : '💖';
+                        element.style.fontSize = (Math.random() * 22 + 15) + 'px';
+                    } else if (selectedType === 'star') {
+                        element.innerHTML = '✨';
+                        element.style.fontSize = (Math.random() * 18 + 12) + 'px';
+                    } else if (selectedType === 'glow') {
+                        element.className = 'glow-light';
+                    }
+
+                    document.body.appendChild(element);
+
+                    // Animate Upwards gracefully
+                    gsap.to(element, {
+                        y: -(window.innerHeight + 150),
+                        x: '+=' + (Math.random() * 150 - 75),
+                        rotation: Math.random() * 180 - 90,
+                        duration: Math.random() * 8 + 6,
+                        ease: "power1.out",
+                        onComplete: () => {
+                            if (element.parentNode) {
+                                element.parentNode.removeChild(element);
+                            }
+                        }
+                    });
+                }, i * 250);
+            }
+        }
+
+        // Start floating animation loop
+        window.addEventListener('load', createFloatingElements);
+        setInterval(createFloatingElements, 5000);
+
+        // Heading Glow Pulse
+        gsap.to('h1', {
+            textShadow: "0 0 15px rgba(255, 255, 255, 1), 0 0 25px rgba(255, 20, 147, 0.9), 0 0 35px rgba(138, 43, 226, 0.8)",
+            repeat: -1,
+            yoyo: true,
+            duration: 1.8
+        });
+    </script>
+</body>
+</html>
